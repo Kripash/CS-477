@@ -1,0 +1,10 @@
+Kripash Shrestha
+CS 477
+Homework 4 
+10/02/2018
+Documentation
+
+
+My function rearrange, rearranges a given array with the size to have the negatives on the left side of the array and the positives on the right side of the array after the function returns. 
+The function sets a variable called replace_index to be 0. This is the idnex that is used to represent the array index in which the negatives elements will go. 
+The function then traverses the size of the array and if the current element is smaller than 0 (negative) then it swaps it with the element in replace_index. Then replace_index is incremented so we do not swap negative lements with negative elements. 

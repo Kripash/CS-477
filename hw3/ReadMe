@@ -1,0 +1,37 @@
+Kripash Shrestha
+CS 477
+Homework 3 
+09/25/2018
+Documentation
+
+
+The bubble sort uses a templated function to handle the input. I have defined ENABLE_OUTPUTS for both programming questions to enable outputs of the arrays and I HIGHLY RECOMMEND to keep it on to see the outputs. The bubble sort takes the input array with its size and loops for its size/2 since it does two traversal modifications for each loop. When it goes from left to right and when it goes from right to left. This should handle the odd cases as well since the odd cases as well. The array first goes from left to right and indices properly and checks to see if the current array element is larger than the next array element. This does this until the array reaches the end at the largest element is on the very end. The algorithm will turn around and then move the smallest element in the current input array to the left side. The array input will then be changed so that one element from each side is taken out. The function call requires the array to sort and the size of the array to be inputed by the user.
+
+Function:
+
+void modifiedBubbleSort(int size, T array[]);
+@param: int size: size of the input array
+@param: T array[]: templated input array to be sorted
+@return: nothing.
+
+
+
+The merge sort has 2 parts to it, and even though 2 functions are used, it is NOT RECURSIVE. It uses a function call to handle the sorting, but is not recursive because the modifiedMergeSort function will call it. The function uses a temporary array to sort each level of merge and sort. The function will loop with the incrementing being multiples of two for i and that will be the amount of loops. Then the inner loop is used to determine the merge by merge by changing the left partitions, mid and right partitions to determine the amount of sorts and merges the algorithm needs to do. The function will handle and make sure that the partition indices will never go past the array size. After the partition indices are made, the function will call the helper function to sort the array. The function will sort the array based on the partitions and make sure that the partitions are sorted properly by comparing the values in the original array. The "sort" actually occurs in the temp array as the temp array will hold the properly sorted array. Once the function returns, the original array will be set to equal to the temp array and the loop continues.
+
+
+Functions:
+
+void modifiedMergeSort(int size, T array[]);
+@param: int size: size of the input arrayt 
+@param: T array[]: templated input array to be sorted
+@return: nothing.
+
+void modifiedSort(T array[], T temp[], int left, int middle, int right, int size)
+@param: T array[]: templated input array to be sorted
+@param: T temp[]: templated temp array to hold the sorts
+@param: int left: holds the left partition index
+@param: int middle: holds the middle index 
+@param: int right: holds the right partition index 
+@param: int size: size of the input array
+@return: nothing.
+

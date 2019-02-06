@@ -1,0 +1,69 @@
+Kripash Shrestha
+CS 477
+Homework 6 
+10/15/2018
+Documentation
+
+
+IMPORTANT NOTE:
+
+The following macros are important for the program to work in the fullest
+
+#define POSSIBLE_SITES 4	//macro for the possible x values
+#define MILES 20			//macro for the total miles on the highway
+#define MAX_SEPARATION 5	//macro for the min separation distance per billboard
+
+POSSIBLE_SITES = n possible sites for the advertisement locations.
+MILES		   = the total length of the highway in D miles, pelase note that when displayed and calculated, the 0th index is not used, so you will see 21 indexes, going from 0-20, for ease of convenience for the programmer. 
+MAX_SEPARATION = the distance smaller than or equal to that two billboards cannot be placed from within each other.
+
+
+
+Part B is represented by the function
+
+int optimizeRevenue(int r_index, int x_array[], int r_array[], billboard_optimize rev_array[][MILES + 1], int used_billboards[]). 
+
+This detials the function functionality.
+
+/*
+The following code uses a bottom up approach to solving the highway advertisement optimization revenue problem. 
+The results of the subproblems are stored in a 2D array of billboard_optimize struct. 
+The problem uses a similar approach to the one used for Knapsack 0-1 problem. 
+The algorithm first sets all of the non used spots to the previous element's values. 
+The algorithm them checks to see if the advertisement spot can be used, and if it can, the algorithm places it if there is no issues. 
+If there is an issue, the algorithm will see which adverisements need to be removed and remove those appropriately and update the index.
+*/
+
+
+Part C is represented by the function
+
+void printLocationsUsed(int used_billboards[], int curr_index, int locations_used[], int x_array[], int r_array[], int advertisement_in_locations[])
+
+This details the function functionality. 
+
+/*
+The function function prints the location used with the revenues and the advertisement used in each location. 
+If the index is 0:
+The function prints out the revenue on each location used on the highway.
+The function then prints out the appropriate indexed advertisement used on the highway.
+If not: 
+The function goes and appropriately marks the arrays used for displays based on the x_array, r_array values and the locations used and billboards to make the proper display.
+*/
+
+Part B is reepresented by the function 
+
+void printAuxiliaryTable(int used_billboards[])
+
+This details the function functionality
+
+/*
+The function prints the auxiliary table for the locations.
+This algorithm uses a bottom up approach of the auxillary table to print the contents within the auxuliary table. 
+The problem goes through the auxiliary table and marks displays the advertisements used, 1 for used and 0 for not used.
+*/
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Kripash Shrestha
+CS 477
+Homework 5 
+10/09/2018
+Documentation
+
+
+Function: void printOut(int array[], int size)
+
+@oaram int array[], the array to print out and check if it is a maxHeap.
+@param size, the size of the array that was passed in to check. 
+@return none
+
+The function will print out the elements of the array and call isMaxHeap with the array and size
+passed in as the parameters and appropriately print out "YES,heap" or "Not a heap", depending on the 
+return value of isMaxHeap.
+
+
+Function: bool isMaxHeap(int array[], int size)
+
+@oaram int array[], the array to check if it is a maxHeap.
+@param size, the size of the array that was passed in to check. 
+@return true, if the array is a max heap and false if the array is not a max heap.
+
+This function checks to see if the given array of size is a max heap or not. I took the iterative approach and iterated with the (size - 2)/2 of the array. 
+The Loop continues until the stopping condition is met. During this loop, the function checks to see if the current inddex's left and right child is larger than itself. 
+If either children is larger than the parent, the function will return false. Otherwise the function will complete the loop and if it did not return false, it will return true, implying it is a max heap.
+
